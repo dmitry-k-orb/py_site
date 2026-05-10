@@ -1,11 +1,12 @@
 from flask import Flask
 from flask import render_template
+from model import get_citate
 
 app = Flask(__name__)
 @app.route("/")
 @app.route("/home")
 def home():
-    perem = "Вася"
+    perem = get_citate()
     return render_template('index.html', perem=perem)
 
 @app.route("/about")

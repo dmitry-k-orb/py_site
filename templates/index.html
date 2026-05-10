@@ -5,6 +5,9 @@
 	</title>
     </head>
     <body>
-	<h1>Привет, {{ perem }}!!!</h1>
+	<h1>Цитаты великих:</h1>
+		{% for p in perem %}
+			<p>Цитата: {{p[2]}}. Автор - {{p[0]}} </p>
+                {% endfor %}
     </body>
 </html>
